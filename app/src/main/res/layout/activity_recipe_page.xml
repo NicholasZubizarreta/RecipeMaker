@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecipePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/backAPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:text="Back"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/yourRecipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Category:"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/scaling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:text="scaling"
+                    android:textSize="36sp" />
+
+                <EditText
+                    android:id="@+id/scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:text="0"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/calculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:text="calculate" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients:"
+                android:textAlignment="center"
+                android:textSize="36sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/wholeNumber15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/topHalf15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/divide15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="/"
+                            android:textSize="36sp" />
+
+                        <TextView
+                            android:id="@+id/bottomHalf15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/units15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/ingredient15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3"
+                            android:hint="ingredient name"
+                            android:text="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/direct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Directions:"
+                android:textAlignment="center"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/directions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

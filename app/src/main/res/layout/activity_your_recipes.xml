@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".YourRecipes">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/backToHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1"
+                    android:text="Home" />
+
+                <TextView
+                    android:id="@+id/yourRecipes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:text="Your Recipes"
+                    android:textAlignment="center"
+                    android:textSize="36sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Category:"
+                    android:textSize="36sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5">
+
+                        <RadioButton
+                            android:id="@+id/category1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Beef"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Chicken"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Seafood"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Pasta"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Soup"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Salad"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Vegetable"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Vegan"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Dessert"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                        <RadioButton
+                            android:id="@+id/category10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:text="Other"
+                            android:textAlignment="center"
+                            android:textSize="30sp" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:hint="Type Search Here"
+                    android:text=""
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button2"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button3"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button4"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button5"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button6"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button7"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button8"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button9"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button10"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button11"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button12"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button13"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button14"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button15"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button16"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button17"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button18"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button19"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/button20"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Button" />-->
+            <!--            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
